@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Allez Fencing Academy | About Us</title>
+  <meta name="description" content="Learn about Allez Fencing Academy's rich history, core athletic values, and dedicated mission to mold competitive fencers into Olympic champions.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'gold-accent': {
+              DEFAULT: '#c5a880',
+              hover: '#bda077',
+              dark: '#b39162',
+            },
+            'charcoal': {
+              900: '#0a0a0a',
+              800: '#161616',
+              700: '#1f1f1f',
+              600: '#2e2e2e',
+            }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white dark:bg-charcoal-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+  <!-- NAVBAR -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3 bg-white dark:bg-[#0a0a0a]/95 border-b border-gray-200 dark:border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2 gap-2 text-white font-serif tracking-widest text-xl md:text-2xl font-bold group">
+          <span class="text-gold-accent group-hover:text-white transition-colors duration-300">
+            <i class="fas fa-shield-halved"></i>
+          </span>
+          <span class="text-gray-900 dark:text-white">ALLEZ</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center space-x-6 gap-1 xl:space-x-8">
+          <a href="index.html" class="nav-link font-medium text-sm tracking-wider uppercase text-gray-600 dark:text-gray-300 hover:text-gold-accent dark:hover:text-gold-accent transition-colors py-2 border-b-2 border-transparent">Home 1</a>
+          <a href="home2.html" class="nav-link font-medium text-sm tracking-wider uppercase text-gray-600 dark:text-gray-300 hover:text-gold-accent dark:hover:text-gold-accent transition-colors py-2 border-b-2 border-transparent">Home 2</a>
+          <a href="about.html" class="nav-link font-medium text-sm tracking-wider uppercase text-gray-900 dark:text-white hover:text-gold-accent transition-colors py-2 border-b-2 border-transparent">About</a>
+          <a href="programs.html" class="nav-link font-medium text-sm tracking-wider uppercase text-gray-600 dark:text-gray-300 hover:text-gold-accent dark:hover:text-gold-accent transition-colors py-2 border-b-2 border-transparent">Programs</a>
+          <a href="coaches.html" class="nav-link font-medium text-sm tracking-wider uppercase text-gray-600 dark:text-gray-300 hover:text-gold-accent dark:hover:text-gold-accent transition-colors py-2 border-b-2 border-transparent">Coaches</a>
+          
+          <a href="blog.html" class="nav-link font-medium text-sm tracking-wider uppercase text-gray-600 dark:text-gray-300 hover:text-gold-accent dark:hover:text-gold-accent transition-colors py-2 border-b-2 border-transparent">Blog</a>
+          <a href="contact.html" class="nav-link font-medium text-sm tracking-wider uppercase text-gray-600 dark:text-gray-300 hover:text-gold-accent dark:hover:text-gold-accent transition-colors py-2 border-b-2 border-transparent">Contact</a>
+        </nav>
+
+        <!-- Right Action Items (Buttons & Toggles) -->
+        <div class="hidden lg:flex items-center space-x-4 gap-2">
+          
+          <!-- Theme Toggle -->
+          <button class="theme-toggle-btn text-gray-600 dark:text-white focus:outline-none p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-colors" title="Toggle Theme">
+            <i class="theme-toggle-icon fas fa-sun text-yellow-400"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="rtl-toggle-btn text-gray-600 dark:text-white focus:outline-none p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-colors" title="Toggle RTL/LTR">
+            <i class="fas fa-right-left text-gold-accent"></i>
+          </button>
+
+          <div class="h-6 w-px bg-gray-200 dark:bg-gray-700/50"></div>
+
+          <a href="signup.html" class="bg-gold-accent hover:bg-gold-accent-hover text-black font-semibold text-xs tracking-widest uppercase px-5 py-2.5 rounded-full transition-all duration-300 shadow-md">Signup</a>
+          
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden flex items-center space-x-4 gap-2">
+          <!-- Mobile Theme Toggle -->
+          <button class="theme-toggle-btn text-gray-600 dark:text-white focus:outline-none p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-colors" title="Toggle Theme">
+            <i class="theme-toggle-icon fas fa-sun text-yellow-400"></i>
+          </button>
+
+          <!-- Mobile RTL Toggle -->
+          <button class="rtl-toggle-btn text-gray-600 dark:text-white focus:outline-none p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-colors" title="Toggle RTL/LTR">
+            <i class="fas fa-right-left text-gold-accent"></i>
+          </button>
+
+          <button id="mobile-menu-btn" class="text-gray-800 dark:text-white hover:text-gold-accent focus:outline-none p-2 rounded-md transition-colors" aria-label="Open Menu">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="fixed inset-y-0 right-0 z-50 w-full max-w-xs glass shadow-2xl p-6 transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col justify-between">
+      <div>
+        <div class="flex items-center justify-between mb-8">
+          <a href="index.html" class="flex items-center space-x-2 gap-2 text-white font-serif tracking-widest text-lg font-bold">
+            <i class="fas fa-shield-halved text-gold-accent"></i>
+            <span class="text-gray-900 dark:text-white">ALLEZ</span>
+          </a>
+          <button id="mobile-menu-close-btn" class="text-white hover:text-gold-accent p-2 focus:outline-none" aria-label="Close Menu">
+            <i class="fas fa-times text-2xl"></i>
+          </button>
+        </div>
+
+        <nav class="flex flex-col space-y-4">
+          <a href="index.html" class="nav-link text-base font-semibold text-gray-300 hover:text-gold-accent transition-colors py-1 border-b border-white/5">Home 1</a>
+          <a href="home2.html" class="nav-link text-base font-semibold text-gray-300 hover:text-gold-accent transition-colors py-1 border-b border-white/5">Home 2</a>
+          <a href="about.html" class="nav-link text-base font-semibold text-gray-300 hover:text-gold-accent transition-colors py-1 border-b border-white/5">About</a>
+          <a href="programs.html" class="nav-link text-base font-semibold text-gray-300 hover:text-gold-accent transition-colors py-1 border-b border-white/5">Programs</a>
+          <a href="coaches.html" class="nav-link text-base font-semibold text-gray-300 hover:text-gold-accent transition-colors py-1 border-b border-white/5">Coaches</a>
+          
+          <a href="blog.html" class="nav-link text-base font-semibold text-gray-300 hover:text-gold-accent transition-colors py-1 border-b border-white/5">Blog</a>
+          <a href="contact.html" class="nav-link text-base font-semibold text-gray-300 hover:text-gold-accent transition-colors py-1 border-b border-white/5">Contact</a>
+        </nav>
+      </div>
+
+      <div class="mt-8 pt-6 border-t border-white/10 flex flex-col space-y-4">
+        
+        <a href="signup.html" class="block text-center py-2.5 bg-gold-accent hover:bg-gold-accent-hover text-black font-semibold rounded-full shadow-lg transition-all">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT HERO SECTION -->
+  <section class="relative min-h-[60vh] flex items-center justify-center pt-40 md:pt-48 pb-16 overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.95)), url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1920&q=80');">
+    <div class="absolute inset-0 bg-gradient-to-t from-charcoal-900 to-transparent"></div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <span class="text-gold-accent font-semibold text-xs uppercase tracking-widest block">Building Champions Since 2010</span>
+      <h1 class="hero-heading text-white max-w-heading mx-auto">About The Academy</h1>
+      <p class="body-text text-gray-300 max-w-paragraph mx-auto">
+        Discover the values, story, and competitive drive that makes Allez a beacon for international-caliber fencing.
+      </p>
+    </div>
+  </section>
+
+  <!-- ACADEMY STORY -->
+  <section class="py-24 bg-white dark:bg-charcoal-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Story Text -->
+        <div class="space-y-6">
+          <span class="text-gold-accent font-semibold text-xs uppercase tracking-widest block">Founder Journey & Vision</span>
+          <h2 class="section-heading text-gray-900 dark:text-white max-w-heading">Academy Story</h2>
+          <p class="body-text text-gray-600 dark:text-gray-400">
+            Allez Fencing Academy was established with a singular vision: to foster a high-performance environment where competitive fencing athletes can maximize their potential while instilling core values of mental discipline, focus, and integrity.
+          </p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+            Our founder, an Olympic medalist and collegiate NCAA champion, recognized the lack of premium sport-specific training hubs that combined tactical film review, physical core agility conditioning, and psychological preparation. Today, Allez bridges that gap, offering top-tier pathways to Ivy League recruitments and national squad selections.
+          </p>
+          <div class="pt-4 flex items-center space-x-6 gap-2">
+            <div class="border-l-4 border-gold-accent pl-4">
+              <p class="font-serif font-bold text-lg text-gray-900 dark:text-white">"Precision in movement, strength in mind."</p>
+              <p class="text-xs text-gray-500 mt-1">— Marcus Allez, Academy Director</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Facility Image -->
+        <div class="relative">
+          <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-gold-accent/20 to-purple-500/10 blur opacity-40"></div>
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl p-1 bg-white/5 border border-white/10">
+            <img src="assets/images/training_facility.png" alt="Training facility" class="w-full h-[380px] object-cover rounded-xl">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MISSION SECTION -->
+  <section class="py-24 bg-slate-50 dark:bg-charcoal-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Left: Image layout -->
+        <div class="order-2 lg:order-1 relative">
+          <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-royal-blue/25 to-purple-500/10 blur opacity-40"></div>
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl p-1 bg-white/5 border border-white/10">
+            <img src="assets/images/fencing_session.png" alt="Fencing session" class="w-full h-[380px] object-cover rounded-xl">
+          </div>
+        </div>
+
+        <!-- Right: Mission text -->
+        <div class="order-1 lg:order-2 space-y-6">
+          <span class="text-gold-accent font-semibold text-xs uppercase tracking-widest block">Core Philosophy</span>
+          <h2 class="section-heading text-gray-900 dark:text-white max-w-heading">Our Mission</h2>
+          <p class="body-text text-gray-600 dark:text-gray-400">
+            To cultivate elite fencers by focusing on core agility mechanics, tactical adaptation, competitive intelligence, and physical stamina.
+          </p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+            We strive to maintain a state-of-the-art fencing platform where athletes of all ages are inspired to challenge their physical boundaries, adopt healthy nutritional frameworks, and understand the technical complexities of epee, foil, and saber fencing.
+          </p>
+          <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-300">
+            <li class="flex items-center gap-2"><i class="fas fa-circle-check text-gold-accent"></i> Broaden fencing exposure in local communities</li>
+            <li class="flex items-center gap-2"><i class="fas fa-circle-check text-gold-accent"></i> Support NCAA collegiate entry pathways</li>
+            <li class="flex items-center gap-2"><i class="fas fa-circle-check text-gold-accent"></i> Provide clean, safe, and elite athletic facilities</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CORE VALUES -->
+  <section class="py-24 bg-white dark:bg-charcoal-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-16 space-y-4">
+        <span class="text-gold-accent font-semibold text-xs uppercase tracking-widest block">Character & Honor</span>
+        <h2 class="section-heading text-gray-900 dark:text-white max-w-heading mx-auto">Core Values</h2>
+        <p class="body-text text-gray-600 dark:text-gray-400 max-w-paragraph mx-auto">
+          Athletic prowess without moral discipline is incomplete. We operate on four foundational pillars.
+        </p>
+      </div>
+
+      <!-- Values Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Value 1 -->
+        <div class="bg-slate-50 dark:bg-charcoal-800 border border-gray-100 dark:border-white/5 p-8 rounded-2xl shadow-sm text-center hover-card-trigger space-y-4">
+          <div class="w-14 h-14 mx-auto rounded-xl bg-gold-accent/10 border border-gold-accent/20 flex items-center justify-center text-gold-accent text-xl">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <h3 class="card-heading text-gray-900 dark:text-white">Discipline</h3>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+            Consistency in practice, dedication to repetitive conditioning, and strict respect for safety instructions.
+          </p>
+        </div>
+
+        <!-- Value 2 -->
+        <div class="bg-slate-50 dark:bg-charcoal-800 border border-gray-100 dark:border-white/5 p-8 rounded-2xl shadow-sm text-center hover-card-trigger space-y-4">
+          <div class="w-14 h-14 mx-auto rounded-xl bg-gold-accent/10 border border-gold-accent/20 flex items-center justify-center text-gold-accent text-xl">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3 class="card-heading text-gray-900 dark:text-white">Respect</h3>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+            Honoring referees, coaches, strip teammates, and opponents. Saluting before and after every bout.
+          </p>
+        </div>
+
+        <!-- Value 3 -->
+        <div class="bg-slate-50 dark:bg-charcoal-800 border border-gray-100 dark:border-white/5 p-8 rounded-2xl shadow-sm text-center hover-card-trigger space-y-4">
+          <div class="w-14 h-14 mx-auto rounded-xl bg-gold-accent/10 border border-gold-accent/20 flex items-center justify-center text-gold-accent text-xl">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h3 class="card-heading text-gray-900 dark:text-white">Excellence</h3>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+            Striving for physical optimization, technical mastery, and clear strategic analysis of every single match.
+          </p>
+        </div>
+
+        <!-- Value 4 -->
+        <div class="bg-slate-50 dark:bg-charcoal-800 border border-gray-100 dark:border-white/5 p-8 rounded-2xl shadow-sm text-center hover-card-trigger space-y-4">
+          <div class="w-14 h-14 mx-auto rounded-xl bg-gold-accent/10 border border-gold-accent/20 flex items-center justify-center text-gold-accent text-xl">
+            <i class="fas fa-medal"></i>
+          </div>
+          <h3 class="card-heading text-gray-900 dark:text-white">Sportsmanship</h3>
+          <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+            Grace in defeat, modesty in victory, and support for the growth and development of teammates on and off strip.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS & STATS SECTION -->
+  <section id="achievements" class="py-24 bg-slate-50 dark:bg-charcoal-800 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="text-center mb-16 space-y-4">
+        <span class="text-gold-accent font-semibold text-xs uppercase tracking-widest block">By The Numbers</span>
+        <h2 class="section-heading text-gray-900 dark:text-white max-w-heading mx-auto">Academy Achievements</h2>
+        <p class="body-text text-gray-600 dark:text-gray-400 max-w-paragraph mx-auto">
+          Over a decade of proven results, championship performances, and life-changing athletic development.
+        </p>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <!-- Stat 1 -->
+        <div class="stat-card group relative bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/5 rounded-2xl p-8 text-center shadow-sm overflow-hidden hover:shadow-xl transition-all duration-500">
+          <div class="absolute inset-0 bg-gradient-to-br from-gold-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-gold-accent/10 border border-gold-accent/25 flex items-center justify-center text-gold-accent text-2xl">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-number text-4xl font-serif font-bold text-gray-900 dark:text-white mb-1" data-target="850">0</div>
+            <div class="text-gold-accent text-2xl font-bold mb-2">+</div>
+            <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-semibold">Athletes Trained</p>
+          </div>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="stat-card group relative bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/5 rounded-2xl p-8 text-center shadow-sm overflow-hidden hover:shadow-xl transition-all duration-500">
+          <div class="absolute inset-0 bg-gradient-to-br from-gold-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-gold-accent/10 border border-gold-accent/25 flex items-center justify-center text-gold-accent text-2xl">
+              <i class="fas fa-medal"></i>
+            </div>
+            <div class="stat-number text-4xl font-serif font-bold text-gray-900 dark:text-white mb-1" data-target="320">0</div>
+            <div class="text-gold-accent text-2xl font-bold mb-2">+</div>
+            <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-semibold">Championships Won</p>
+          </div>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="stat-card group relative bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/5 rounded-2xl p-8 text-center shadow-sm overflow-hidden hover:shadow-xl transition-all duration-500">
+          <div class="absolute inset-0 bg-gradient-to-br from-gold-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-gold-accent/10 border border-gold-accent/25 flex items-center justify-center text-gold-accent text-2xl">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="stat-number text-4xl font-serif font-bold text-gray-900 dark:text-white mb-1" data-target="47">0</div>
+            <div class="text-gold-accent text-2xl font-bold mb-2">+</div>
+            <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-semibold">NCAA Placements</p>
+          </div>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="stat-card group relative bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/5 rounded-2xl p-8 text-center shadow-sm overflow-hidden hover:shadow-xl transition-all duration-500">
+          <div class="absolute inset-0 bg-gradient-to-br from-gold-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <div class="relative z-10">
+            <div class="w-14 h-14 mx-auto mb-4 rounded-xl bg-gold-accent/10 border border-gold-accent/25 flex items-center justify-center text-gold-accent text-2xl">
+              <i class="fas fa-calendar-check"></i>
+            </div>
+            <div class="stat-number text-4xl font-serif font-bold text-gray-900 dark:text-white mb-1" data-target="16">0</div>
+            <div class="text-gold-accent text-2xl font-bold mb-2">+</div>
+            <p class="text-xs uppercase tracking-widest text-gray-500 dark:text-gray-400 font-semibold">Years of Excellence</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Achievement Badges Row -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div class="flex items-center gap-4 bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/5 rounded-2xl p-5 shadow-sm">
+          <div class="w-12 h-12 shrink-0 rounded-xl bg-gold-accent/10 border border-gold-accent/20 flex items-center justify-center text-gold-accent text-lg">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <div>
+            <p class="font-serif font-bold text-gray-900 dark:text-white text-sm">National Finalists</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400">12 athletes reached USFA nationals</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/5 rounded-2xl p-5 shadow-sm">
+          <div class="w-12 h-12 shrink-0 rounded-xl bg-gold-accent/10 border border-gold-accent/20 flex items-center justify-center text-gold-accent text-lg">
+            <i class="fas fa-star"></i>
+          </div>
+          <div>
+            <p class="font-serif font-bold text-gray-900 dark:text-white text-sm">Certified Coaching Staff</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400">All coaches hold FIE & USFA certifications</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 bg-white dark:bg-charcoal-900 border border-gray-100 dark:border-white/5 rounded-2xl p-5 shadow-sm">
+          <div class="w-12 h-12 shrink-0 rounded-xl bg-gold-accent/10 border border-gold-accent/20 flex items-center justify-center text-gold-accent text-lg">
+            <i class="fas fa-shield-halved"></i>
+          </div>
+          <div>
+            <p class="font-serif font-bold text-gray-900 dark:text-white text-sm">Olympic Pathway</p>
+            <p class="text-xs text-gray-500 dark:text-gray-400">3 alumni competed in international circuits</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section id="testimonials" class="py-24 bg-white dark:bg-charcoal-900 relative overflow-hidden">
+    <!-- Decorative background elements -->
+    <div class="absolute top-0 left-0 w-96 h-96 bg-gold-accent/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="text-center mb-16 space-y-4">
+        <span class="text-gold-accent font-semibold text-xs uppercase tracking-widest block">Voices From The Strip</span>
+        <h2 class="section-heading text-gray-900 dark:text-white max-w-heading mx-auto">What Our Athletes Say</h2>
+        <p class="body-text text-gray-600 dark:text-gray-400 max-w-paragraph mx-auto">
+          Hear directly from the athletes, parents, and recruits who've experienced the Allez difference firsthand.
+        </p>
+      </div>
+
+      <!-- Testimonials Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <!-- Testimonial 1 -->
+        <div class="group relative flex flex-col bg-slate-50 dark:bg-charcoal-800 border border-gray-100 dark:border-white/5 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-400 overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold-accent to-yellow-300 rounded-t-2xl"></div>
+          <!-- Quote Icon -->
+          <div class="text-gold-accent/25 text-7xl font-serif leading-none mb-4 select-none">&ldquo;</div>
+          <!-- Stars -->
+          <div class="flex gap-1 mb-4 -mt-6">
+            <i class="fas fa-star text-gold-accent text-xs"></i>
+            <i class="fas fa-star text-gold-accent text-xs"></i>
+            <i class="fas fa-star text-gold-accent text-xs"></i>
+            <i class="fas fa-star text-gold-accent text-xs"></i>
+            <i class="fas fa-star text-gold-accent text-xs"></i>
+          </div>
+          <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-6 grow">
+            "Allez completely transformed how I approach competition. The tactical film sessions and one-on-one coaching gave me an edge I never had before. I earned my spot on the regional squad within a year of joining."
+          </p>
+          <!-- Author -->
+          <div class="flex items-center gap-4 mt-auto pt-4 border-t border-gray-200 dark:border-white/10">
+            <img src="assets/images/testimonial_1.png" alt="Sofia Reyes" class="w-12 h-12 rounded-full object-cover border-2 border-gold-accent/30">
+            <div>
+              <p class="font-serif font-bold text-gray-900 dark:text-white text-sm">Sofia Reyes</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">Epee Competitor · Age 22</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="group relative flex flex-col bg-charcoal-900 dark:bg-charcoal-800 border border-white/5 rounded-2xl p-8 shadow-xl hover:-translate-y-1 transition-all duration-400 overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold-accent to-yellow-300 rounded-t-2xl"></div>
+          <div class="text-gold-accent/25 text-7xl font-serif leading-none mb-4 select-none">&ldquo;</div>
+          <div class="flex gap-1 mb-4 -mt-6">
+            <i class="fas fa-star text-gold-accent text-xs"></i>
+            <i class="fas fa-star text-gold-accent text-xs"></i>
+            <i class="fas fa-star text-gold-accent text-xs"></i>
+            <i class="fas fa-star text-gold-accent text-xs"></i>
+            <i class="fas fa-star text-gold-accent text-xs"></i>
+          </div>
+          <p class="text-sm text-white/80 leading-relaxed mb-6 grow">
+            "The training methodology here is unlike any academy I've been to. Coach Marcus breaks down every movement pattern so precisely. I went from a local club player to receiving interest from two Ivy League programs in 18 months."
+          </p>
+          <div class="flex items-center gap-4 mt-auto pt-4 border-t border-white/10">
+            <img src="assets/images/testimonial_2.png" alt="Jordan Kai" class="w-12 h-12 rounded-full object-cover border-2 border-gold-accent/50">
+            <div>
+              <p class="font-serif font-bold text-white text-sm">Jordan Kai</p>
+              <p class="text-xs text-gray-400">Foil Specialist · NCAA Recruit</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="group relative flex flex-col bg-slate-50 dark:bg-charcoal-800 border border-gray-100 dark:border-white/5 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-400 overflow-hidden">
+          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold-accent to-yellow-300 rounded-t-2xl"></div>
+          <div class="text-gold-accent/25 text-7xl font-serif leading-none mb-4 select-none">&ldquo;</div>
+          <div class="flex gap-1 mb-4 -mt-6">
+            <i class="fas fa-star text-gold-accent text-xs"></i>
+            <i class="fas fa-star text-gold-accent text-xs"></i>
+            <i class="fas fa-star text-gold-accent text-xs"></i>
+            <i class="fas fa-star text-gold-accent text-xs"></i>
+            <i class="fas fa-star-half-alt text-gold-accent text-xs"></i>
+          </div>
+          <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-6 grow">
+            "As a parent I was initially skeptical, but seeing my daughter grow in both confidence and skill has been incredible. The academy's structured environment and mentorship go well beyond just sport — they build character."
+          </p>
+          <div class="flex items-center gap-4 mt-auto pt-4 border-t border-gray-200 dark:border-white/10">
+            <img src="assets/images/testimonial_3.png" alt="Christine Morrow" class="w-12 h-12 rounded-full object-cover border-2 border-gold-accent/30">
+            <div>
+              <p class="font-serif font-bold text-gray-900 dark:text-white text-sm">Christine Morrow</p>
+              <p class="text-xs text-gray-500 dark:text-gray-400">Parent of Academy Member</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA Banner -->
+      <div class="mt-16 relative rounded-2xl overflow-hidden bg-gradient-to-r from-charcoal-900 via-charcoal-800 to-charcoal-900 dark:from-charcoal-800 dark:via-charcoal-700 dark:to-charcoal-800 border border-white/10 p-10 text-center shadow-2xl">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold-accent/10 via-transparent to-transparent pointer-events-none"></div>
+        <div class="relative z-10 space-y-4">
+          <i class="fas fa-shield-halved text-gold-accent text-3xl"></i>
+          <h3 class="font-serif font-bold text-white text-2xl md:text-3xl">Ready to Begin Your Journey?</h3>
+          <p class="text-gray-400 text-sm max-w-md mx-auto">Join over 850 athletes who chose Allez as their path to competitive excellence.</p>
+          <a href="contact.html" class="inline-block mt-4 bg-gold-accent hover:bg-gold-accent-hover text-black font-semibold text-sm tracking-widest uppercase px-8 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-gold-accent/30">
+            Enroll Now <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="bg-slate-50 dark:bg-[#0a0a0a] border-t border-gray-200 dark:border-white/10 py-16 text-gray-500 dark:text-gray-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        
+        <!-- Column 1: Branding -->
+        <div class="space-y-4">
+          <a href="index.html" class="flex items-center space-x-2 gap-2 text-gray-900 dark:text-white font-serif tracking-widest text-xl font-bold">
+            <i class="fas fa-shield-halved text-gold-accent"></i>
+            <span class="text-gray-900 dark:text-white">ALLEZ</span>
+          </a>
+          <p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">
+            A world-class fencing training facility providing Olympic-style weapon mastery, certified coaching, and collegiate recruitment pathways.
+          </p>
+          <div class="flex space-x-4 gap-1.5 pt-2">
+            <a href="#" class="text-gray-400 hover:text-gold-accent text-lg transition-colors"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-400 hover:text-gold-accent text-lg transition-colors"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-400 hover:text-gold-accent text-lg transition-colors"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-400 hover:text-gold-accent text-lg transition-colors"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Navigation Links -->
+        <div class="space-y-4">
+          <h4 class="text-gray-900 dark:text-white font-serif font-semibold uppercase tracking-wider text-xs">Quick Links</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-gold-accent transition-colors">Home 1</a></li>
+            <li><a href="home2.html" class="hover:text-gold-accent transition-colors">Home 2</a></li>
+            <li><a href="about.html" class="hover:text-gold-accent transition-colors">About Us</a></li>
+            <li><a href="programs.html" class="hover:text-gold-accent transition-colors">Programs</a></li>
+            <li><a href="coaches.html" class="hover:text-gold-accent transition-colors">Academy Coaches</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Secondary Links -->
+        <div class="space-y-4">
+          <h4 class="text-gray-900 dark:text-white font-serif font-semibold uppercase tracking-wider text-xs">Resources</h4>
+          <ul class="space-y-2 text-xs">
+            
+            <li><a href="blog.html" class="hover:text-gold-accent transition-colors font-semibold text-gold-accent">Academy Blog</a></li>
+            <li><a href="contact.html" class="hover:text-gold-accent transition-colors">Enrollment & Contact</a></li>
+            
+            <li><a href="signup.html" class="hover:text-gold-accent transition-colors">Join Academy</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Newsletter -->
+        <div class="space-y-4">
+          <h4 class="text-gray-900 dark:text-white font-serif font-semibold uppercase tracking-wider text-xs">Newsletter</h4>
+          <p class="text-xs text-gray-600 dark:text-gray-400">Receive tournament updates, schedule edits, and expert fencing guides.</p>
+          <form id="newsletter-form" class="space-y-2">
+            <div class="relative">
+              <input type="email" placeholder="Email Address" required class="w-full bg-white dark:bg-charcoal-800 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white rounded-full px-4 py-2 text-xs focus:outline-none focus:border-gold-accent">
+              <button type="submit" class="absolute right-1.5 top-1.5 bg-gold-accent hover:bg-gold-accent-hover text-black px-3 py-1 rounded-full text-xs font-semibold">Join</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="border-t border-gray-200 dark:border-white/5 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+        <p>&copy; 2026 Allez Fencing Academy. All rights reserved.</p>
+        <div class="flex space-x-6 gap-2">
+          <a href="#" class="hover:text-gray-900 dark:hover:text-white">Privacy Policy</a>
+          <a href="#" class="hover:text-gray-900 dark:hover:text-white">Terms of Service</a>
+          <a href="#" class="hover:text-gray-900 dark:hover:text-white">NCAA Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Stat Counter Animation -->
+  <script>
+    (function () {
+      function animateCount(el, target, duration) {
+        let start = 0;
+        const step = Math.ceil(target / (duration / 16));
+        const timer = setInterval(() => {
+          start += step;
+          if (start >= target) { start = target; clearInterval(timer); }
+          el.textContent = start.toLocaleString();
+        }, 16);
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            document.querySelectorAll('.stat-number').forEach(el => {
+              const target = parseInt(el.getAttribute('data-target'), 10);
+              animateCount(el, target, 1800);
+            });
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.3 });
+
+      const section = document.getElementById('achievements');
+      if (section) observer.observe(section);
+    })();
+  </script>
+  <!-- Core JavaScript -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

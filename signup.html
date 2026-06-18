@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Allez Fencing Academy | Academy Signup</title>
+  <meta name="description" content="Register for an Allez Fencing Academy profile. Gain priority enrollment, tournament calendars, and event updates.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            'gold-accent': {
+              DEFAULT: '#c5a880',
+              hover: '#bda077',
+              dark: '#b39162',
+            },
+            'charcoal': {
+              900: '#0a0a0a',
+              800: '#161616',
+              700: '#1f1f1f',
+              600: '#2e2e2e',
+            }
+          },
+          fontFamily: {
+            serif: ['Cinzel', 'serif'],
+            sans: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white dark:bg-charcoal-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+  <!-- Floating Toggles -->
+  <div class="fixed top-4 right-4 z-50 flex items-center gap-2">
+    <!-- Theme Toggle -->
+    <button class="theme-toggle-btn bg-white dark:bg-charcoal-800 border border-gray-200 dark:border-white/10 text-gray-600 dark:text-white focus:outline-none p-2.5 rounded-full shadow-md hover:shadow-lg hover:bg-gray-50 dark:hover:bg-white/10 transition-all" title="Toggle Theme">
+      <i class="theme-toggle-icon fas fa-sun text-yellow-400 text-sm"></i>
+    </button>
+    <!-- RTL Toggle -->
+    <button class="rtl-toggle-btn bg-white dark:bg-charcoal-800 border border-gray-200 dark:border-white/10 text-gray-600 dark:text-white focus:outline-none p-2.5 rounded-full shadow-md hover:shadow-lg hover:bg-gray-50 dark:hover:bg-white/10 transition-all" title="Toggle RTL/LTR">
+      <i class="fas fa-right-left text-gold-accent text-sm"></i>
+    </button>
+  </div>
+
+  <!-- SIGNUP SECTION -->
+  <section class="min-h-screen flex items-center justify-center py-12 bg-white dark:bg-charcoal-900">
+    
+
+    <!-- Registration Form -->
+    <div class="w-full max-w-md mx-auto px-4 sm:px-6">
+      <div class="w-full space-y-8 bg-white dark:bg-charcoal-800 border border-gray-200 dark:border-white/10 rounded-2xl shadow-xl dark:shadow-black/40 px-8 py-10">
+        
+        <!-- Logo -->
+        <div class="text-center mb-2">
+          <a href="index.html" class="inline-flex items-center gap-2 font-serif tracking-widest text-2xl font-bold group">
+            <span class="text-gold-accent group-hover:opacity-80 transition-opacity">
+              <i class="fas fa-shield-halved"></i>
+            </span>
+            <span class="text-gray-900 dark:text-white">ALLEZ</span>
+          </a>
+        </div>
+
+        <div class="space-y-2 text-center">
+          <h2 class="font-serif font-bold text-3xl text-gray-900 dark:text-white">Register Profile</h2>
+          <p class="text-xs text-gray-500 dark:text-gray-400">Create your private Allez Academy athlete credentials.</p>
+        </div>
+
+        <form id="signup-form" class="space-y-4">
+          
+          <div>
+            <label for="reg-name" class="block text-[10px] uppercase tracking-wider text-gray-400 font-bold mb-1.5">Full Name</label>
+            <input type="text" id="reg-name" required class="w-full bg-slate-50 dark:bg-charcoal-800 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white rounded-lg px-4 py-3 text-xs focus:outline-none focus:border-gold-accent transition-colors">
+          </div>
+
+          <div>
+            <label for="reg-email" class="block text-[10px] uppercase tracking-wider text-gray-400 font-bold mb-1.5">Email Address</label>
+            <input type="email" id="reg-email" required class="w-full bg-slate-50 dark:bg-charcoal-800 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white rounded-lg px-4 py-3 text-xs focus:outline-none focus:border-gold-accent transition-colors">
+          </div>
+
+          <div>
+            <label for="reg-phone" class="block text-[10px] uppercase tracking-wider text-gray-400 font-bold mb-1.5">Phone Number</label>
+            <input type="tel" id="reg-phone" required class="w-full bg-slate-50 dark:bg-charcoal-800 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white rounded-lg px-4 py-3 text-xs focus:outline-none focus:border-gold-accent transition-colors">
+          </div>
+
+          <div>
+            <label for="reg-pass" class="block text-[10px] uppercase tracking-wider text-gray-400 font-bold mb-1.5">Create Password</label>
+            <div class="relative">
+              <input type="password" id="reg-pass" required class="w-full bg-slate-50 dark:bg-charcoal-800 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white rounded-lg px-4 py-3 text-xs focus:outline-none focus:border-gold-accent transition-colors pr-10">
+              <button type="button" class="password-toggle absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gold-accent focus:outline-none" aria-label="Toggle Password Visibility">
+                <i class="fas fa-eye text-xs"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex items-center text-xs text-gray-500 dark:text-gray-400 pt-2">
+            <label class="flex items-start space-x-2 gap-1.5">
+              <input type="checkbox" required class="rounded border-gray-300 text-gold-accent focus:ring-gold-accent bg-transparent mt-0.5">
+              <span>I confirm USA Fencing safety conditions and academy Terms.</span>
+            </label>
+          </div>
+
+          <div class="pt-4">
+            <button type="submit" class="w-full py-4 text-xs font-bold uppercase tracking-widest text-[#121212] bg-gold-accent hover:bg-gold-accent-hover rounded-full transition-colors shadow-lg">Sign Up</button>
+          </div>
+
+        </form>
+
+        <div class="text-center text-xs text-gray-500 dark:text-gray-400">
+          <p>Already have an account? <a href="login.html" class="text-gold-accent font-semibold hover:underline">Log In</a></p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Core JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
