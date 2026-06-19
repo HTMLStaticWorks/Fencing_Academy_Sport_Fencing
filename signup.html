@@ -22,9 +22,9 @@
         extend: {
           colors: {
             'gold-accent': {
-              DEFAULT: '#c5a880',
-              hover: '#bda077',
-              dark: '#b39162',
+              DEFAULT: '#8B5A2B',
+              hover: '#7C5026',
+              dark: '#6D4621',
             },
             'charcoal': {
               900: '#0a0a0a',
@@ -36,6 +36,15 @@
           fontFamily: {
             serif: ['Cinzel', 'serif'],
             sans: ['Outfit', 'sans-serif'],
+          },
+          fontWeight: {
+            light: '300',
+            normal: '410',
+            medium: '500',
+            semibold: '520',
+            bold: '500',
+            extrabold: '540',
+            black: '580',
           }
         }
       }
@@ -106,6 +115,16 @@
             </div>
           </div>
 
+          <div>
+            <label for="reg-pass-confirm" class="block text-[10px] uppercase tracking-wider text-gray-400 font-bold mb-1.5">Confirm Password</label>
+            <div class="relative">
+              <input type="password" id="reg-pass-confirm" required class="w-full bg-slate-50 dark:bg-charcoal-800 border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white rounded-lg px-4 py-3 text-xs focus:outline-none focus:border-gold-accent transition-colors pr-10">
+              <button type="button" class="password-toggle absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gold-accent focus:outline-none" aria-label="Toggle Password Visibility">
+                <i class="fas fa-eye text-xs"></i>
+              </button>
+            </div>
+          </div>
+
           <div class="flex items-center text-xs text-gray-500 dark:text-gray-400 pt-2">
             <label class="flex items-start space-x-2 gap-1.5">
               <input type="checkbox" required class="rounded border-gray-300 text-gold-accent focus:ring-gold-accent bg-transparent mt-0.5">
@@ -119,7 +138,25 @@
 
         </form>
 
-        <div class="text-center text-xs text-gray-500 dark:text-gray-400">
+        <div class="relative flex py-2 items-center">
+          <div class="flex-grow border-t border-gray-200 dark:border-white/10"></div>
+          <span class="flex-shrink mx-4 text-[10px] text-gray-400 uppercase tracking-widest font-semibold">Or continue with</span>
+          <div class="flex-grow border-t border-gray-200 dark:border-white/10"></div>
+        </div>
+
+        <div class="flex justify-center gap-4">
+          <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-300 hover:border-gold-accent dark:hover:border-gold-accent hover:text-gold-accent dark:hover:text-gold-accent transition-colors bg-slate-50 dark:bg-charcoal-700/30">
+            <i class="fab fa-google text-sm"></i>
+          </a>
+          <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-300 hover:border-gold-accent dark:hover:border-gold-accent hover:text-gold-accent dark:hover:text-gold-accent transition-colors bg-slate-50 dark:bg-charcoal-700/30">
+            <i class="fab fa-apple text-sm"></i>
+          </a>
+          <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full border border-gray-200 dark:border-white/10 text-gray-600 dark:text-gray-300 hover:border-gold-accent dark:hover:border-gold-accent hover:text-gold-accent dark:hover:text-gold-accent transition-colors bg-slate-50 dark:bg-charcoal-700/30">
+            <i class="fab fa-facebook-f text-sm"></i>
+          </a>
+        </div>
+
+        <div class="text-center text-xs text-gray-500 dark:text-gray-400 mt-4">
           <p>Already have an account? <a href="login.html" class="text-gold-accent font-semibold hover:underline">Log In</a></p>
         </div>
 

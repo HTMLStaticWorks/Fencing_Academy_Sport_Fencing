@@ -164,10 +164,10 @@ function initActiveNavLinks() {
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
     if (href === currentPath || (currentPath === '' && href === 'index.html')) {
-      link.classList.add('text-[#c5a880]', 'border-b-2', 'border-[#c5a880]');
+      link.classList.add('text-[#8B5A2B]', 'border-b-2', 'border-[#8B5A2B]');
       link.classList.remove('text-gray-300', 'text-gray-700');
     } else {
-      link.classList.remove('text-[#c5a880]', 'border-b-2', 'border-[#c5a880]');
+      link.classList.remove('text-[#8B5A2B]', 'border-b-2', 'border-[#8B5A2B]');
     }
   });
 }
@@ -205,24 +205,35 @@ function initForms() {
 
       // Basic styling for simulated alert
       const alertBox = document.createElement('div');
-      alertBox.className = 'fixed bottom-5 right-5 glass text-white px-6 py-4 rounded-xl shadow-2xl border-l-4 border-[#c5a880] transform translate-y-20 opacity-0 transition-all duration-500 z-50';
-      
+      let isSuccess = true;
+      let borderColorClass = 'border-[#8B5A2B]';
       let message = 'Form submitted successfully!';
+
       if (form.id === 'contact-form') {
         message = 'Thank you! Your enrollment consultation request has been received.';
       } else if (form.id === 'login-form') {
         message = 'Welcome back! You have successfully logged in.';
       } else if (form.id === 'signup-form') {
-        message = 'Account created successfully! Welcome to the Academy.';
+        const pass = document.getElementById('reg-pass');
+        const confirmPass = document.getElementById('reg-pass-confirm');
+        if (pass && confirmPass && pass.value !== confirmPass.value) {
+          message = 'Passwords do not match. Please verify.';
+          isSuccess = false;
+          borderColorClass = 'border-red-500';
+        } else {
+          message = 'Account created successfully! Welcome to the Academy.';
+        }
       } else if (form.id === 'newsletter-form') {
         message = 'Thank you for subscribing to our training insights!';
       }
 
+      alertBox.className = `fixed bottom-5 right-5 glass text-white px-6 py-4 rounded-xl shadow-2xl border-l-4 ${borderColorClass} transform translate-y-20 opacity-0 transition-all duration-500 z-50`;
+ 
       alertBox.innerHTML = `
         <div class="flex items-center space-x-3 gap-2">
-          <i class="fas fa-check-circle text-[#c5a880] text-xl"></i>
+          <i class="fas ${isSuccess ? 'fa-check-circle text-[#8B5A2B]' : 'fa-exclamation-circle text-red-500'} text-xl"></i>
           <div>
-            <p class="font-semibold text-sm">Success</p>
+            <p class="font-semibold text-sm">${isSuccess ? 'Success' : 'Error'}</p>
             <p class="text-xs text-gray-400">${message}</p>
           </div>
         </div>
@@ -241,7 +252,9 @@ function initForms() {
         setTimeout(() => alertBox.remove(), 500);
       }, 4000);
 
-      form.reset();
+      if (isSuccess) {
+        form.reset();
+      }
     });
   });
 }
@@ -260,8 +273,8 @@ function initGalleryFilter() {
       const category = btn.getAttribute('data-filter');
 
       // Update active button classes
-      filters.forEach(f => f.classList.remove('bg-[#c5a880]', 'text-black', 'active'));
-      btn.classList.add('bg-[#c5a880]', 'text-black', 'active');
+      filters.forEach(f => f.classList.remove('bg-[#8B5A2B]', 'text-black', 'active'));
+      btn.classList.add('bg-[#8B5A2B]', 'text-black', 'active');
 
       items.forEach(item => {
         const itemCats = item.getAttribute('data-categories').split(' ');

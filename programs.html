@@ -24,9 +24,9 @@
         extend: {
           colors: {
             'gold-accent': {
-              DEFAULT: '#c5a880',
-              hover: '#bda077',
-              dark: '#b39162',
+              DEFAULT: '#8B5A2B',
+              hover: '#7C5026',
+              dark: '#6D4621',
             },
             'charcoal': {
               900: '#0a0a0a',
@@ -38,6 +38,15 @@
           fontFamily: {
             serif: ['Cinzel', 'serif'],
             sans: ['Outfit', 'sans-serif'],
+          },
+          fontWeight: {
+            light: '300',
+            normal: '410',
+            medium: '500',
+            semibold: '520',
+            bold: '500',
+            extrabold: '540',
+            black: '580',
           }
         }
       }
@@ -63,7 +72,7 @@
         </a>
 
         <!-- Desktop Navigation Links -->
-        <nav class="hidden lg:flex items-center space-x-6 gap-1 xl:space-x-8">
+        <nav class="hidden lg:flex items-center lg:space-x-4 lg:mx-6 xl:space-x-8 xl:mx-10">
           <a href="index.html"
             class="nav-link font-medium text-sm tracking-wider uppercase text-gray-600 dark:text-gray-300 hover:text-gold-accent dark:hover:text-gold-accent transition-colors py-2 border-b-2 border-transparent">Home
             1</a>
@@ -133,48 +142,46 @@
       </div>
     </div>
 
-    <!-- Mobile Drawer Menu -->
-    <div id="mobile-menu"
-      class="fixed inset-y-0 right-0 z-50 w-full max-w-xs glass shadow-2xl p-6 transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col justify-between">
+        <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="fixed inset-y-0 right-0 z-50 w-full max-w-xs bg-white/95 dark:bg-charcoal-900/95 backdrop-blur-md shadow-2xl p-6 border-l border-gray-200 dark:border-white/10 transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col justify-between">
       <div>
         <div class="flex items-center justify-between mb-8">
-          <a href="index.html"
-            class="flex items-center space-x-2 gap-2 text-white font-serif tracking-widest text-lg font-bold">
+          <a href="index.html" class="flex items-center space-x-2 gap-2 text-gray-900 dark:text-white font-serif tracking-widest text-lg font-bold group">
             <i class="fas fa-shield-halved text-gold-accent"></i>
             <span class="text-gray-900 dark:text-white">ALLEZ</span>
           </a>
-          <button id="mobile-menu-close-btn" class="text-white hover:text-gold-accent p-2 focus:outline-none"
-            aria-label="Close Menu">
+          <button id="mobile-menu-close-btn" class="text-gray-800 dark:text-white hover:text-gold-accent p-2 focus:outline-none" aria-label="Close Menu">
             <i class="fas fa-times text-2xl"></i>
           </button>
         </div>
 
         <nav class="flex flex-col space-y-4">
-          <a href="index.html"
-            class="nav-link text-base font-semibold text-gray-300 hover:text-gold-accent transition-colors py-1 border-b border-white/5">Home
-            1</a>
-          <a href="home2.html"
-            class="nav-link text-base font-semibold text-gray-300 hover:text-gold-accent transition-colors py-1 border-b border-white/5">Home
-            2</a>
-          <a href="about.html"
-            class="nav-link text-base font-semibold text-gray-300 hover:text-gold-accent transition-colors py-1 border-b border-white/5">About</a>
-          <a href="programs.html"
-            class="nav-link text-base font-semibold text-gray-300 hover:text-gold-accent transition-colors py-1 border-b border-white/5">Programs</a>
-          <a href="coaches.html"
-            class="nav-link text-base font-semibold text-gray-300 hover:text-gold-accent transition-colors py-1 border-b border-white/5">Coaches</a>
-
-          <a href="blog.html"
-            class="nav-link text-base font-semibold text-gray-300 hover:text-gold-accent transition-colors py-1 border-b border-white/5">Blog</a>
-          <a href="contact.html"
-            class="nav-link text-base font-semibold text-gray-300 hover:text-gold-accent transition-colors py-1 border-b border-white/5">Contact</a>
+          <a href="index.html" class="nav-link text-base font-semibold text-gray-700 dark:text-gray-300 hover:text-gold-accent transition-colors py-1 border-b border-gray-100 dark:border-white/5">Home 1</a>
+          <a href="home2.html" class="nav-link text-base font-semibold text-gray-700 dark:text-gray-300 hover:text-gold-accent transition-colors py-1 border-b border-white/5">Home 2</a>
+          <a href="about.html" class="nav-link text-base font-semibold text-gray-700 dark:text-gray-300 hover:text-gold-accent transition-colors py-1 border-b border-white/5">About</a>
+          <a href="programs.html" class="nav-link text-base font-semibold text-gray-700 dark:text-gray-300 hover:text-gold-accent transition-colors py-1 border-b border-gray-100 dark:border-white/5">Programs</a>
+          <a href="coaches.html" class="nav-link text-base font-semibold text-gray-700 dark:text-gray-300 hover:text-gold-accent transition-colors py-1 border-b border-white/5">Coaches</a>
+          
+          <a href="blog.html" class="nav-link text-base font-semibold text-gray-700 dark:text-gray-300 hover:text-gold-accent transition-colors py-1 border-b border-white/5">Blog</a>
+          <a href="contact.html" class="nav-link text-base font-semibold text-gray-700 dark:text-gray-300 hover:text-gold-accent transition-colors py-1 border-b border-white/5">Contact</a>
         </nav>
       </div>
 
-      <div class="mt-8 pt-6 border-t border-white/10 flex flex-col space-y-4">
-
-        <a href="signup.html"
-          class="block text-center py-2.5 bg-gold-accent hover:bg-gold-accent-hover text-black font-semibold rounded-full shadow-lg transition-all">Sign
-          Up</a>
+      <div class="mt-8 pt-6 border-t border-gray-200 dark:border-white/10 flex flex-col space-y-4">
+        <div class="flex items-center justify-around py-2 bg-gray-100 dark:bg-black/25 rounded-xl border border-gray-200 dark:border-white/5">
+          <!-- Theme Toggle -->
+          <button class="theme-toggle-btn text-gray-700 dark:text-gray-300 hover:text-gold-accent dark:hover:text-gold-accent focus:outline-none p-2 rounded-full transition-colors flex items-center gap-2 text-sm font-semibold" title="Toggle Theme">
+            <i class="theme-toggle-icon fas fa-sun text-yellow-500 dark:text-yellow-400"></i>
+            <span>Theme</span>
+          </button>
+          <div class="h-6 w-px bg-gray-300 dark:bg-white/10"></div>
+          <!-- RTL Toggle -->
+          <button class="rtl-toggle-btn text-gray-700 dark:text-gray-300 hover:text-gold-accent dark:hover:text-gold-accent focus:outline-none p-2 rounded-full transition-colors flex items-center gap-2 text-sm font-semibold" title="Toggle RTL/LTR">
+            <i class="fas fa-right-left text-gold-accent"></i>
+            <span>RTL</span>
+          </button>
+        </div>
+        <a href="signup.html" class="block text-center py-2.5 bg-gold-accent hover:bg-gold-accent-hover text-black font-semibold rounded-full shadow-lg transition-all">Sign Up</a>
       </div>
     </div>
   </header>
@@ -437,19 +444,19 @@
               <td class="p-4 font-semibold text-gray-900 dark:text-white">16:00 - 17:30</td>
               <td class="p-4">
                 <span class="block font-semibold text-gray-800 dark:text-gray-200">Beginner Fencing</span>
-                <span class="text-[10px] text-gray-400">Youth (Ages 7-12)</span>
+                <span class="text-xs text-gray-600 dark:text-gray-400 font-medium">Youth (Ages 7-12)</span>
               </td>
               <td class="p-4">
                 <span class="block font-semibold text-gray-800 dark:text-gray-200">Youth Academy</span>
-                <span class="text-[10px] text-gray-400">Foil Focus</span>
+                <span class="text-xs text-gray-600 dark:text-gray-400 font-medium">Foil Focus</span>
               </td>
               <td class="p-4">
                 <span class="block font-semibold text-gray-800 dark:text-gray-200">Open Strip Practice</span>
-                <span class="text-[10px] text-gray-400">All Weapons</span>
+                <span class="text-xs text-gray-600 dark:text-gray-400 font-medium">All Weapons</span>
               </td>
               <td class="p-4">
                 <span class="block font-semibold text-gray-800 dark:text-gray-200">Private Coaching</span>
-                <span class="text-[10px] text-gray-400">By Appointment</span>
+                <span class="text-xs text-gray-600 dark:text-gray-400 font-medium">By Appointment</span>
               </td>
             </tr>
 
@@ -457,19 +464,19 @@
               <td class="p-4 font-semibold text-gray-900 dark:text-white">17:30 - 19:00</td>
               <td class="p-4">
                 <span class="block font-semibold text-gray-800 dark:text-gray-200">Intermediate Epee</span>
-                <span class="text-[10px] text-gray-400">Ages 10-15</span>
+                <span class="text-xs text-gray-600 dark:text-gray-400 font-medium">Ages 10-15</span>
               </td>
               <td class="p-4">
                 <span class="block font-semibold text-gray-800 dark:text-gray-200">Intermediate Saber</span>
-                <span class="text-[10px] text-gray-400">Ages 10-15</span>
+                <span class="text-xs text-gray-600 dark:text-gray-400 font-medium">Ages 10-15</span>
               </td>
               <td class="p-4">
                 <span class="block font-semibold text-gray-800 dark:text-gray-200">Tactical Video Review</span>
-                <span class="text-[10px] text-gray-400">Advanced Competitors</span>
+                <span class="text-xs text-gray-600 dark:text-gray-400 font-medium">Advanced Competitors</span>
               </td>
               <td class="p-4">
                 <span class="block font-semibold text-gray-800 dark:text-gray-200">Beginner Fencing</span>
-                <span class="text-[10px] text-gray-400">Youth (Ages 7-12)</span>
+                <span class="text-xs text-gray-600 dark:text-gray-400 font-medium">Youth (Ages 7-12)</span>
               </td>
             </tr>
 
@@ -477,19 +484,19 @@
               <td class="p-4 font-semibold text-gray-900 dark:text-white">19:00 - 21:00</td>
               <td class="p-4">
                 <span class="block font-semibold text-gray-800 dark:text-gray-200">Advanced/Competitive</span>
-                <span class="text-[10px] text-gray-400">Foil & Epee Duels</span>
+                <span class="text-xs text-gray-600 dark:text-gray-400 font-medium">Foil & Epee Duels</span>
               </td>
               <td class="p-4">
                 <span class="block font-semibold text-gray-800 dark:text-gray-200">Competitive Team</span>
-                <span class="text-[10px] text-gray-400">Saber Core Sparring</span>
+                <span class="text-xs text-gray-600 dark:text-gray-400 font-medium">Saber Core Sparring</span>
               </td>
               <td class="p-4">
                 <span class="block font-semibold text-gray-800 dark:text-gray-200">Adult Recreation</span>
-                <span class="text-[10px] text-gray-400">Beginner & Intermediate</span>
+                <span class="text-xs text-gray-600 dark:text-gray-400 font-medium">Beginner & Intermediate</span>
               </td>
               <td class="p-4">
                 <span class="block font-semibold text-gray-800 dark:text-gray-200">Elite Squad Prep</span>
-                <span class="text-[10px] text-gray-400">Custom Conditioning</span>
+                <span class="text-xs text-gray-600 dark:text-gray-400 font-medium">Custom Conditioning</span>
               </td>
             </tr>
           </tbody>
@@ -503,7 +510,7 @@
   <section id="pricing" class="py-24 bg-white dark:bg-charcoal-900 relative overflow-hidden">
     <!-- Subtle grid background -->
     <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.06] pointer-events-none"
-      style="background-image: linear-gradient(#c5a880 1px, transparent 1px), linear-gradient(90deg, #c5a880 1px, transparent 1px); background-size: 40px 40px;">
+      style="background-image: linear-gradient(#8B5A2B 1px, transparent 1px), linear-gradient(90deg, #8B5A2B 1px, transparent 1px); background-size: 40px 40px;">
     </div>
     <!-- Glow blobs -->
     <div class="absolute top-20 right-10 w-80 h-80 bg-gold-accent/8 rounded-full blur-3xl pointer-events-none"></div>
@@ -583,7 +590,7 @@
           <!-- Popular badge -->
           <div class="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
             <span
-              class="bg-gold-accent text-black text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg">Most
+              class="bg-gold-accent text-black text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg whitespace-nowrap">Most
               Popular</span>
           </div>
           <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold-accent to-yellow-300 rounded-t-2xl">
@@ -698,18 +705,18 @@
   <!-- FOOTER -->
 
   <footer
-    class="bg-slate-50 dark:bg-[#0a0a0a] border-t border-gray-200 dark:border-white/10 py-16 text-gray-500 dark:text-gray-400 text-sm">
+    class="bg-slate-50 dark:bg-[#0a0a0a] border-t border-gray-200 dark:border-white/10 py-16 text-gray-700 dark:text-gray-300 text-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
 
         <!-- Column 1: Branding -->
         <div class="space-y-4">
           <a href="index.html"
-            class="flex items-center space-x-2 gap-2 text-gray-900 dark:text-white font-serif tracking-widest text-xl font-bold">
+            class="flex items-center space-x-2 gap-2 text-gray-900 dark:text-white font-serif tracking-widest text-xl md:text-2xl font-bold group">
             <i class="fas fa-shield-halved text-gold-accent"></i>
             <span class="text-gray-900 dark:text-white">ALLEZ</span>
           </a>
-          <p class="text-xs leading-relaxed text-gray-600 dark:text-gray-400">
+          <p class="text-xs leading-relaxed text-gray-700 dark:text-gray-300">
             A world-class fencing training facility providing Olympic-style weapon mastery, certified coaching, and
             collegiate recruitment pathways.
           </p>
@@ -756,7 +763,7 @@
         <div class="space-y-4">
           <h4 class="text-gray-900 dark:text-white font-serif font-semibold uppercase tracking-wider text-xs">Newsletter
           </h4>
-          <p class="text-xs text-gray-600 dark:text-gray-400">Receive tournament updates, schedule edits, and expert
+          <p class="text-xs text-gray-700 dark:text-gray-300">Receive tournament updates, schedule edits, and expert
             fencing guides.</p>
           <form id="newsletter-form" class="space-y-2">
             <div class="relative">
@@ -771,7 +778,7 @@
       </div>
 
       <div
-        class="border-t border-gray-200 dark:border-white/5 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+        class="border-t border-gray-200 dark:border-white/5 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between text-xs text-gray-600 dark:text-gray-400 gap-4">
         <p>&copy; 2026 Allez Fencing Academy. All rights reserved.</p>
         <div class="flex space-x-6 gap-2">
           <a href="#" class="hover:text-gray-900 dark:hover:text-white">Privacy Policy</a>

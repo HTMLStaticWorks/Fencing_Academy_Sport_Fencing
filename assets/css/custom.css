@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Outfit:wght@100..900&display=swap');
 
 :root {
   --font-serif: 'Cinzel', serif;
   --font-sans: 'Outfit', sans-serif;
-  --color-gold: #c5a880;
-  --color-gold-hover: #bda077;
+  --color-gold: #8B5A2B;
+  --color-gold-hover: #7C5026;
   --color-dark: #0a0a0a;
 }
 
@@ -84,28 +84,95 @@ html[dir="rtl"] .rtl-flip {
 }
 
 /* Custom font sizes for typography requirements */
+h1 {
+  font-family: var(--font-serif);
+  font-weight: 580;
+  font-size: clamp(4.5rem, 6vw, 5rem); /* 4.5 to 6 rem range (lower bound) */
+  line-height: 1.1;
+}
 .hero-heading {
   font-family: var(--font-serif);
-  font-size: clamp(3rem, 6vw, 4.5rem); /* 60px–72px equivalent */
+  font-weight: 580 !important;
+  font-size: clamp(4.5rem, 6vw, 5rem) !important; /* 4.5 to 6 rem range (lower bound) */
   line-height: 1.1;
 }
 
+h2 {
+  font-family: var(--font-serif);
+  font-weight: 540;
+  font-size: clamp(3rem, 4.5vw, 3.5rem); /* 3 to 4.5 rem range (lower bound) */
+  line-height: 1.2;
+}
 .section-heading {
   font-family: var(--font-serif);
-  font-size: clamp(2.25rem, 4.5vw, 3.25rem); /* 42px–52px equivalent */
+  font-weight: 540 !important;
+  font-size: clamp(3rem, 4.5vw, 3.5rem) !important; /* 3 to 4.5 rem range (lower bound) */
   line-height: 1.2;
 }
 
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 520;
+  font-size: clamp(2rem, 3vw, 2.25rem); /* 2 to 3 rem range (lower bound) */
+  line-height: 1.3;
+}
 .card-heading {
   font-family: var(--font-serif);
-  font-size: clamp(1.25rem, 2vw, 1.5rem); /* 20px–24px equivalent */
+  font-weight: 520 !important;
+  font-size: clamp(1.25rem, 2vw, 1.5rem) !important; /* Adjusted to a cleaner, smaller size */
   line-height: 1.3;
 }
 
+h4, h5, h6 {
+  font-weight: 500;
+  font-size: clamp(1.5rem, 2vw, 1.75rem); /* 1.5 to 2 rem range (lower bound) */
+  line-height: 1.3;
+}
+
+p {
+  font-family: var(--font-sans);
+  font-weight: 410; /* within 400-430 range */
+  font-size: clamp(0.9rem, 2vw, 1.2rem); /* 0.9 to 1.2 rem */
+  line-height: 1.6;
+}
 .body-text {
   font-family: var(--font-sans);
-  font-size: clamp(1rem, 1.5vw, 1.125rem); /* 16px–18px equivalent */
+  font-weight: 410 !important; /* within 400-430 range */
+  font-size: clamp(0.9rem, 2vw, 1.2rem) !important; /* 0.9 to 1.2 rem */
   line-height: 1.6;
+}
+
+/* Helper styles for rest of spec */
+.subheading-text, .lead-text {
+  font-weight: 480 !important; /* 450-500 */
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem) !important;
+}
+
+button, .btn, a.bg-gold-accent, a.bg-transparent {
+  font-weight: 510;
+}
+.button-text {
+  font-weight: 510 !important; /* 500-520 */
+  font-size: clamp(0.9rem, 2vw, 1.2rem) !important;
+}
+
+label {
+  font-weight: 480;
+}
+.nav-link {
+  font-weight: 480 !important;
+}
+
+caption {
+  font-weight: 400;
+}
+.caption-text, .small-text {
+  font-weight: 400 !important;
+  font-size: clamp(0.75rem, 1.5vw, 1rem) !important;
+}
+
+strong, b, .bold-inline {
+  font-weight: 500 !important;
 }
 
 /* Card hover animation */
