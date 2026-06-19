@@ -164,10 +164,9 @@ function initActiveNavLinks() {
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
     if (href === currentPath || (currentPath === '' && href === 'index.html')) {
-      link.classList.add('text-[#8B5A2B]', 'border-b-2', 'border-[#8B5A2B]');
-      link.classList.remove('text-gray-300', 'text-gray-700');
+      link.classList.add('active-nav');
     } else {
-      link.classList.remove('text-[#8B5A2B]', 'border-b-2', 'border-[#8B5A2B]');
+      link.classList.remove('active-nav');
     }
   });
 }

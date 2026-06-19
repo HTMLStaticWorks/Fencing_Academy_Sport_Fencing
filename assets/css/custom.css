@@ -87,33 +87,33 @@ html[dir="rtl"] .rtl-flip {
 h1 {
   font-family: var(--font-serif);
   font-weight: 580;
-  font-size: clamp(4.5rem, 6vw, 5rem); /* 4.5 to 6 rem range (lower bound) */
+  font-size: clamp(2.25rem, 6vw, 5rem); /* Adjusted minimum bound for mobile responsiveness */
   line-height: 1.1;
 }
 .hero-heading {
   font-family: var(--font-serif);
   font-weight: 580 !important;
-  font-size: clamp(4.5rem, 6vw, 5rem) !important; /* 4.5 to 6 rem range (lower bound) */
+  font-size: clamp(2.25rem, 6vw, 5rem) !important; /* Adjusted minimum bound for mobile responsiveness */
   line-height: 1.1;
 }
 
 h2 {
   font-family: var(--font-serif);
   font-weight: 540;
-  font-size: clamp(3rem, 4.5vw, 3.5rem); /* 3 to 4.5 rem range (lower bound) */
+  font-size: clamp(1.75rem, 4.5vw, 3.5rem); /* Adjusted minimum bound for mobile responsiveness */
   line-height: 1.2;
 }
 .section-heading {
   font-family: var(--font-serif);
   font-weight: 540 !important;
-  font-size: clamp(3rem, 4.5vw, 3.5rem) !important; /* 3 to 4.5 rem range (lower bound) */
+  font-size: clamp(1.75rem, 4.5vw, 3.5rem) !important; /* Adjusted minimum bound for mobile responsiveness */
   line-height: 1.2;
 }
 
 h3 {
   font-family: var(--font-serif);
   font-weight: 520;
-  font-size: clamp(2rem, 3vw, 2.25rem); /* 2 to 3 rem range (lower bound) */
+  font-size: clamp(1.5rem, 3vw, 2.25rem); /* Adjusted minimum bound for mobile responsiveness */
   line-height: 1.3;
 }
 .card-heading {
@@ -125,7 +125,7 @@ h3 {
 
 h4, h5, h6 {
   font-weight: 500;
-  font-size: clamp(1.5rem, 2vw, 1.75rem); /* 1.5 to 2 rem range (lower bound) */
+  font-size: clamp(1.25rem, 2vw, 1.75rem); /* Adjusted minimum bound for mobile responsiveness */
   line-height: 1.3;
 }
 
@@ -184,3 +184,15 @@ strong, b, .bold-inline {
   transform: translateY(-6px);
   border-color: var(--color-gold);
 }
+
+/* Active navigation links styling overrides */
+.nav-link.active-nav {
+  color: var(--color-gold) !important;
+  border-color: var(--color-gold) !important;
+}
+
+/* High z-index enforcement for mobile drawer menu */
+#mobile-menu {
+  z-index: 100 !important;
+}
+
